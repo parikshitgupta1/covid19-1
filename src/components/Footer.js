@@ -12,14 +12,14 @@ export default class Footer extends Component {
     toggle = () => this.setState({ modal: !this.state.modal })
 
     render() {
-        const { lang, fullMap, fullPlot, fullTree } = this.props
-        if (fullMap || fullPlot || fullTree) return <div />
+        const { lang, fullMap, fullPlot } = this.props
+        if (fullMap || fullPlot) return <div />
 
         return (
             <Fragment>
                 <div className="footer">
                     <span>
-                        <a href="https://yliu.io">Steven Liu</a> 2020
+                        <a href="https://parikshitgupta.in">Parikshit Gupta</a> 2020
                     </span>
                     <FaInfoCircle
                         data-tip={!(isMobile || isIPad13) ? i18n.ABOUT[lang] : null}
@@ -29,7 +29,7 @@ export default class Footer extends Component {
                     <FaGithub
                         data-tip={!(isMobile || isIPad13) ? i18n.SOURCE_CODE[lang] : null}
                         size={18}
-                        onClick={() => window.open('https://github.com/stevenliuyi/covid19')}
+                        onClick={() => window.open('https://github.com/parikshitgupta1/covid19')}
                     />
                 </div>
                 <Modal isOpen={this.state.modal} centered={true} toggle={this.toggle}>
@@ -39,14 +39,14 @@ export default class Footer extends Component {
                         <a
                             className="bmc-button"
                             target="_blank"
-                            href="https://www.buymeacoffee.com/stevenliuyi"
+                            href="https://parikshitgupta.netlify.com"
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
-                                alt="Buy me a coffee"
+                                src="https://simpleicons.org/icons/github.svg"
+                                alt="@parikshitgupta1"
                             />
-                            <span style={{ marginLeft: 15, fontSize: 19 }}>Buy me a coffee</span>
+                            <span style={{ marginLeft: 15, fontSize: 19 }}>@parikshitgupta1</span>
                         </a>
                     </ModalBody>
                 </Modal>
